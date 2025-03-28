@@ -1,0 +1,24 @@
+[project]
+name = "petcare-backend"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "allisoncoates",email = "coates.allison@outlook.com"}
+]
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "flask (>=3.1.0,<4.0.0)",
+    "mysql-connector-python (>=9.2.0,<10.0.0)",
+    "flask-mysqldb (>=2.0.0,<3.0.0)"
+]
+
+[tool.poetry]
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.11.0"
+interrogate = "^1.7.0"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
