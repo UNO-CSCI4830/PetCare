@@ -45,7 +45,6 @@ export class SignInComponent implements OnInit {
       }
     })
 
-    //this.checkExistentUsers(this.loginForm.value);
 
   }
 
@@ -66,36 +65,6 @@ export class SignInComponent implements OnInit {
       }
     })
   }
-  //       console.log('Users: ', response);
-  //       const users : User[] = response;
-  //       for( let user of users) {
-  //         console.log("user: ", user.email);
-  //         console.log("loginForm username: ", this.loginForm.controls['username'].value);
-          
-  //         if (user.email.toLowerCase()===this.loginForm.controls['username'].value) {
-  //           this.userExists = true;
-  //           break;
-            
-  //         }
-  //       }
-  //       if (this.userExists === true) {
-  //         this.goToMainDashboard();
-  //         console.log('inside the userExists===true:', this.userExists);
-          
-          
-  //       }
-  //       else {
-  //         this.loginForm.reset();
-  //         this.userExists = false;
-  //         console.log('inside the userExists===false:', this.userExists);
-  //       }
-      
-  //     },
-  //     error: (error) => {
-  //       console.log('Error retrieving users: ', error);
-        
-  //     }
-  //   })
-  // }
+
 
 }

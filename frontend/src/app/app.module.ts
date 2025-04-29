@@ -20,7 +20,7 @@ import { RouterModule } from '@angular/router';
     SignUpComponent,
     AboutUsComponent,
     ContactUsComponent,
-    PetProfileComponent
+    PetProfileComponent,
   ],
   imports: [
     BrowserModule,

@@ -15,10 +15,6 @@ export class PetCareService {
     return this.http.get<any>(`${this.baseUrl}/pets/${4}`);
   }
 
-  getPetImage(): Observable<any> {
-    return this.http.get<any>(`${this.baseUrl}/pets/user/${4}`);
-  }
-
   login(credentials: Object): Observable<any> {
     return this.http.post<any>(`${this.baseUrl}/users/login`, credentials);
   }
