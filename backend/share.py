@@ -1,13 +1,12 @@
 # Share API routes
 
-from flask import Blueprint, request, jsonify
-from flask_mysqldb import MySQL
+from flask import Blueprint, request, jsonify, current_app
 
 bp = Blueprint("share", __name__, url_prefix="/share")
-mysql = MySQL()
 
 @bp.post("", strict_slashes=False)
 def share_pet_profile():
+    mysql = current_app.extensions["mysql"]
     data = request.get_json()
     pet_id = data.get("pet_id")
     shared_with_user_id = data.get("shared_with_user_id")
@@ -25,6 +24,7 @@ def share_pet_profile():
 
 @bp.get("/<int:user_id>", strict_slashes=False)
 def get_shared_pets(user_id):
+    mysql = current_app.extensions["mysql"]
     cur = mysql.connection.cursor()
     cur.execute("""
         SELECT pets.id, pets.name, pets.type, pets.breed, pets.age, sp.permission_level
