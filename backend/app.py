@@ -1,16 +1,10 @@
 from flask import Flask, jsonify, send_from_directory
 from flask_mysqldb import MySQL
-from flask_cors import CORS  # Import CORS
-<<<<<<< Updated upstream
-import pets, users, contacts, vaccinations, activities, appointments, diets, medications
-import os
-=======
 import pets, users, contacts, vaccinations, activities, share, appointments, diets, medications
->>>>>>> Stashed changes
+
 
 app = Flask(__name__)
 
-CORS(app)
 
 # Configure database
 app.config['MYSQL_HOST'] = 'petcare-db.cbyc0go6qmwd.us-east-2.rds.amazonaws.com'  # AWS endpoint
