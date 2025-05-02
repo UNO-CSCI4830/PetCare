@@ -1,7 +1,12 @@
 from flask import Flask, jsonify, send_from_directory
 from flask_mysqldb import MySQL
+<<<<<<< Updated upstream
 import pets, users, contacts, vaccinations, activities, share, appointments, diets, medications
 
+=======
+from flask_cors import CORS  # Import CORS
+import pets, users, contacts, vaccinations, activities, share, appointments, diets, medications
+>>>>>>> Stashed changes
 
 app = Flask(__name__)
 
